@@ -10,6 +10,8 @@ import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
@@ -225,7 +227,7 @@ public class MainMenu extends Application {
 		Group group = new Group();
 
 		// Creating a Scene by passing the group object, height and width
-		Scene scene = new Scene(group, 600, 300);
+		Scene scene = new Scene(group, 1600, 900);
 
 		/**
 		 * Add Tab
@@ -244,6 +246,10 @@ public class MainMenu extends Application {
 			hbox.getChildren().add(new Label("Label" + i));
 			hbox.setAlignment(Pos.CENTER);
 			tab.setContent(getHbox());
+			String textFieldStr = getHbox().getAccessibleText();
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle(textFieldStr);
+			
 			tabPane.getTabs().add(tab);
 			}
 			if(i == 3){
