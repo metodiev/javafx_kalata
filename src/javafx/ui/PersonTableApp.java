@@ -19,12 +19,12 @@ public class PersonTableApp extends Application {
     	
     	/**
     	 * 
-    	 * String url = "jdbc:mysql://localhost:3306/javabase";
+    	 * String url = "jdbc:mysql://localhost:3305/javabase";
 String username = "java";
 String password = "password";
     	 */
     	String driverClassName= "com.mysql.jdbc.Driver";
-    	String dbUrl = "jdbc:mysql://localhost:3306/test";
+    	String dbUrl = "jdbc:mysql://127.0.0.1:3306/hotel";
     	String user = "root";
     	String password = "";
     	

@@ -4,6 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Person {
+	
 	private final StringProperty firstName = new SimpleStringProperty(this, "firstName");
 
 	public StringProperty firstNameProperty() {
