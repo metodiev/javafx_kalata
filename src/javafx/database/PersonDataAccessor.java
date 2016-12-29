@@ -9,6 +9,7 @@ import java.sql.ResultSet ;
 import java.util.List ;
 
 import javafx.model.Person;
+import javafx.scene.layout.HBox;
 
 import java.util.ArrayList ;
 
@@ -44,6 +45,6 @@ public class PersonDataAccessor {
             return personList ;
         } 
     }
-
+    
     // other methods, eg. addPerson(...) etc
 }

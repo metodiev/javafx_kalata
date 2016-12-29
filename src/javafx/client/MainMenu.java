@@ -1,6 +1,6 @@
 package javafx.client;
 
-
+import javafx.ui.*;
 import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -245,7 +245,19 @@ public class MainMenu extends Application {
 			hbox.setAlignment(Pos.CENTER);
 			tab.setContent(getHbox());
 			tabPane.getTabs().add(tab);
-			}else{
+			}
+			if(i == 3){
+				PersonTableApp person = new PersonTableApp();
+				Tab tab = new Tab();
+				tab.setText("Tab" + i);
+				HBox hbox = new HBox();
+				hbox.getChildren().add(new Label("Label" + i));
+				//hbox.setAlignment(Pos.CENTER);
+				hbox.setMaxWidth(105.2);
+				tab.setContent(person.getPersonDetails());
+				tabPane.getTabs().add(tab);
+			}
+			else{
 				Tab tab = new Tab();
 				tab.setText("Tab" + i);
 				HBox hbox = new HBox();
