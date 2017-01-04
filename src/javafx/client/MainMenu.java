@@ -35,6 +35,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextBuilder;
 import javafx.stage.Stage;
 import javafx.scene.control.TextField;
+import javafx.optional.DatePickerSample;
 
 public class MainMenu extends Application {
 
@@ -139,8 +140,7 @@ public class MainMenu extends Application {
         cbCHoice.setValue("English");
         
         hbox.getChildren().add(cbCHoice);
-        
-        
+                
         //gettextfield
         
         GridPane grid2 = new GridPane();
@@ -148,17 +148,13 @@ public class MainMenu extends Application {
         grid.setVgap(5);
         grid.setHgap(5);
 
-        
-
         final TextField name = new TextField();
         name.setPromptText("Enter your first name.");
         name.setPrefColumnCount(10);
         name.getText();
         GridPane.setConstraints(name, 0, 0);
         grid.getChildren().add(name);
-        
         hbox.getChildren().add(name);
-        
         
  //gettextfield2
         
@@ -166,8 +162,6 @@ public class MainMenu extends Application {
         grid.setPadding(new Insets(10, 10, 10, 10));
         grid.setVgap(5);
         grid.setHgap(5);
-
-        
 
         final TextField textField3 = new TextField();
         textField3.setPromptText("Enter your first name.");
@@ -263,10 +257,21 @@ public class MainMenu extends Application {
 				tab.setContent(person.getPersonDetails());
 				tabPane.getTabs().add(tab);
 			}
+			if(i==4){
+				Tab tab = new Tab();
+				tab.setText("Tab" + i);
+				HBox hbox = new HBox();
+				DatePickerSample datepicker = new DatePickerSample();
+				//hbox.getChildren().add(datepicker.initUI());
+				hbox.setAlignment(Pos.CENTER);
+				tab.setContent(hbox);
+				tabPane.getTabs().add(tab);
+			}
 			else{
 				Tab tab = new Tab();
 				tab.setText("Tab" + i);
 				HBox hbox = new HBox();
+			
 				hbox.getChildren().add(new Label("Label" + i));
 				hbox.setAlignment(Pos.CENTER);
 				tab.setContent(hbox);
